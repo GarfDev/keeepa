@@ -83,7 +83,7 @@ if($account) {
         
         $re = '/wss:\/\/"\+([A-Z]|[a-z])*\[([A-Z]|[a-z]|[0-9])*\]\+"\/apps\/cloud/m';
         
-        $response = preg_replace($re, 'ws://keeepa.amztoolz.com/_dyn/apps/cloud', $response);
+        $response = preg_replace($re, 'ws://171.225.194.46:3000/apps/cloud', $response);
         
         
         $reg = '/storage.token=\sa/m';
