@@ -83,7 +83,7 @@ if($account) {
         
         $re = '/wss:\/\/"\+([A-Z]|[a-z])*\[([A-Z]|[a-z]|[0-9])*\]\+"\/apps\/cloud/m';
         
-        $response = preg_replace($re, 'wss://100.120.23.117:3000/apps/cloud', $response);
+        $response = preg_replace($re, 'ws://100.120.23.117:3000/apps/cloud', $response);
         
         
         $reg = '/storage.token=\sa/m';
