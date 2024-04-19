@@ -67,7 +67,7 @@ if($account) {
         $response = $curl->getRawResponse(); //Do blocking here
         
         
-        $response = str_replace_all([
+        $response = str_replace([
             'https://keepa.com',
             'cdn.keepa.com',
             'push.keepa.com',
