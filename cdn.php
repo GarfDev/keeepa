@@ -67,7 +67,7 @@ if($account) {
         $response = $curl->getRawResponse(); //Do blocking here
         
         
-        $response = str_replace([
+        $response = str_replace_all([
             'https://keepa.com',
             'cdn.keepa.com',
             'push.keepa.com',
@@ -83,7 +83,7 @@ if($account) {
         
         $re = '/wss:\/\/"\+([A-Z]|[a-z])*\[([A-Z]|[a-z]|[0-9])*\]\+"\/apps\/cloud/m';
         
-        $response = preg_replace($re, 'wss://keeepa.amztoolz.com/_dyn/apps/cloud', $response);
+        $response = preg_replace($re, 'ws://keeepa.amztoolz.com/_dyn/apps/cloud', $response);
         
         
         $reg = '/storage.token=\sa/m';
