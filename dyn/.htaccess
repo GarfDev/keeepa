@@ -2,8 +2,8 @@ ReWriteEngine On
 
 CGIPassAuth on
 
+RewriteCond %{HTTP:Connection} Upgrade [NC]
 RewriteCond %{HTTP:Upgrade} websocket [NC]
-RewriteCond %{HTTP:Connection} upgrade [NC]
 
 RewriteRule ^/?(.*) "ws://localhost:9000/$1" [P,L]
 
