@@ -88,7 +88,9 @@ if($account) {
         
         $reg = '/storage.token=\sa/m';
         
-        $token = $account['token'];
+        $localstorage = json_decode($account['localstorage'], true);
+
+        $token = $localstorage['token'];
         
         $response = preg_replace($reg, 'storage.token="'.$token.'"', $response);
 
